@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/b104dd498c.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+    <title>API Tester</title>
+  </head>
+  <body>
+    <section id="container">
+      <form>
+        <div class="input-box">
+          <div class="search-method">
+            <input
+              type="search"
+              id="method"
+              placeholder="METHOD"
+              spellcheck="false"
+              aria-label="search"
+              value="GET"
+            />
+            <button type="button">
+              <i
+                class="fa-solid fa-angle-down fa-sm"
+                style="color: #fafafa"
+              ></i>
+            </button>
+            <div class="dropdown hidden">
+              <div class="dropdown-options">
+                <p>GET</p>
+                <p>POST</p>
+                <p>PUT</p>
+                <p>PATCH</p>
+                <p>DELETE</p>
+                <p>HEAD</p>
+                <p>OPTIONS</p>
+              </div>
+              <p>Type a new method</p>
+            </div>
+          </div>
+          <input
+            id="url-input"
+            type="text"
+            placeholder="Enter URL or place text"
+          />
+        </div>
+        <button>Send</button>
+      </form>
+      <div class="data-entry">
+        <p class="selected" id="params-selector">Params</p>
+        <p id="header-selector">Headers</p>
+        <p id="body-selector">Body</p>
+      </div>
+      <div id="query">
+        <p class="data-entry-type">Query Params</p>
+        <div class="data-entry-box">
+          <div class="data-entry-table">
+            <p>Key</p>
+            <p>Value</p>
+            <p>Description</p>
+          </div>
+          <div class="data-entry-input">
+            <input type="text" placeholder="Key" id="data-entry-key" />
+            <input type="text" placeholder="Value" id="data-entry-value" />
+            <input type="text" placeholder="Description" />
+          </div>
+          <button data-hover="Add Row" id="add-row">
+            <i
+              class="fa-solid fa-circle-plus fa-2xl"
+              style="color: #fafafa"
+            ></i>
+          </button>
+        </div>
+      </div>
+      <div id="headers" class="hidden">
+        <p class="data-entry-type">Headers</p>
+        <div class="data-entry-box">
+          <div class="data-entry-table">
+            <p>Key</p>
+            <p>Value</p>
+            <p>Description</p>
+          </div>
+          <div class="data-entry-input">
+            <input type="text" placeholder="Key" id="data-entry-key" />
+            <input type="text" placeholder="Value" id="data-entry-value" />
+            <input type="text" placeholder="Description" />
+          </div>
+          <button data-hover="Add Row" id="add-row">
+            <i
+              class="fa-solid fa-circle-plus fa-2xl"
+              style="color: #fafafa"
+            ></i>
+          </button>
+        </div>
+      </div>
+      <div id="body" class="hidden">
+        <p class="data-entry-type">Body</p>
+        <div class="data-entry-box">
+          <!-- <div id="request-body"></div> -->
+          <div class="data-entry-table">
+            <p>Key</p>
+            <p>Value</p>
+            <p>Description</p>
+          </div>
+          <div class="data-entry-input">
+            <input type="text" placeholder="Key" id="data-entry-key" />
+            <input type="text" placeholder="Value" id="data-entry-value" />
+            <input type="text" placeholder="Description" />
+          </div>
+          <button data-hover="Add Row" id="add-row">
+            <i
+              class="fa-solid fa-circle-plus fa-2xl"
+              style="color: #fafafa"
+            ></i>
+          </button>
+        </div>
+      </div>
+    </section>
+    <div class="response-box">
+      <div class="animation-container">
+        <div class="animation"></div>
+      </div>
+      <section id="response-tab" class="hidden">
+        <div>
+          <div class="data-entry">
+            <p class="selected" id="response-body-selector">Body</p>
+            <p id="response-header-selector">Headers</p>
+          </div>
+          <div id="response-details">
+            <i class="fa-solid fa-globe" style="color: #f7f7f8"></i>
+            <p>Status: <span id="status"></span></p>
+            <p>Time: <span id="time"></span></p>
+            <p>Size: <span id="size"></span></p>
+          </div>
+        </div>
+        <div id="display-body"></div>
+        <div id="display-header" class="hidden"></div>
+      </section>
+      <section id="response-placeholder">
+        <p>Response</p>
+        <p>Enter the URL and click send to get a response</p>
+      </section>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
