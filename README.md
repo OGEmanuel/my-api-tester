@@ -17,7 +17,7 @@ This project is a demonstration of my JavaScript expertise. It showcases my abil
 ## Key JavaScript Concepts Used
 
 - **DOM Manipulation:** The app dynamically updates the user interface based on user input and API responses, using vanilla JavaScript to interact with HTML elements.
-- **Fetch API:** HTTP requests are sent using the Fetch API, allowing asynchronous communication with external APIs and handling responses efficiently.
+- **Axios Library:** HTTP requests are sent using the Axios library, which simplifies making asynchronous requests to external APIs and handling responses efficiently. Axios provides a promise-based API and supports features like automatic JSON parsing, error handling, and custom headers.
 - **Event Handling:** User actions (such as button clicks and form submissions) are managed with event listeners to provide interactive functionality.
 - **Error Handling:** The app gracefully handles errors from failed API requests and invalid user input, providing feedback to the user.
 - **Modular Code Structure:** JavaScript code is organized for readability and maintainability, separating concerns between UI logic and API communication.
