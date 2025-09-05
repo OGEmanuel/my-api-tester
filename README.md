@@ -72,7 +72,3 @@ Open your browser and navigate to the local URL shown in the terminal (usually `
 - Vite (for development server and build)
 - Vanilla JavaScript
 - HTML & CSS
-
-## License
-
-This project is licensed under the MIT License.
